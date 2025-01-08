@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box_model</title>
+    <style>
+        #box {
+            height: 50vh;
+            width: 50%;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 25%;
+            margin-top: 25vh;
+            background-color: rgba(203, 203, 203, 0.466);
+        }
+
+        input {
+            height: 2rem;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        button {
+            border-radius: 5px;
+            background-color: white;
+            border-radius: 2px solid black;
+            height: 40px;
+            width: 70px;
+        }
+
+        button:hover {
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="t"></p>
+    <div id="box">
+
+        <div>
+            <h3 style="text-align: center;">Login</h3><br>
+            <input type="text" placeholder="First Name" name="first_name" id="first_name"><br><br>
+            <input type="text" placeholder="Second Name" name="second_name" id="second_name"><br><br>
+            <button onclick="func()">Submit</button>
+        </div>
+
+    </div>
+    <script>
+        let first_name = prompt("Enter your First Name :");
+        let second_name = prompt("Enter your second Name : ");
+        func1();
+        function func1() {
+            document.getElementById("first_name").value = first_name;
+            document.getElementById("second_name").value = second_name;
+        }
+        ('form').submit(function (evt) {
+            evt.preventDefault(); //prevents the default action
+
+        });
+        function func() {
+
+            let first_name = document.getElementById("first_name").value;
+            let second_name = document.getElementById("second_name").value;
+            document.getElementById("box").style.display = "none";
+            document.getElementById("t").innerText = "first_name : " + first_name + "second name : " + second_name;
+        }
+    </script>
+</body>
+
+</html>
