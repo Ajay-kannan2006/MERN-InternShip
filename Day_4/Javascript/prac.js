@@ -21,7 +21,7 @@ obj2.abs = 1;
 console.log(obj2);
 
 //Set
-set = new Set(["hello", 2, "SECE"], 4);
+set = new Set(["hello", 2, "SECE"]);
 console.log(typeof (set));
 set.add(1);
 set.add(1);
