@@ -56,4 +56,4 @@
 //8.Destructuring Operator
 var array = [10, 20, 30];
 var [a, b] = array;
-console.log(a, b);
+console.log(a, b);   
