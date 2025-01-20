@@ -4,14 +4,16 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import ClassComp from './ClassComp'
 import Gallery from './Gallery'
+import Contact from './Contact'
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
 
   return (
     <>
       <ClassComp />
       <Gallery image="SECE Logo" />
+      <Contact />
     </>
   )
 }
