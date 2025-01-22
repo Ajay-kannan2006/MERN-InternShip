@@ -20,8 +20,8 @@ const App = () => {
           <Route path="/" element={<SignUp />}></Route>
           <Route path="/home" element={<Home />}></Route>
           <Route path="/card" element={<Card title="Introduction" description="This is a simple card component." />}></Route>
-          <Route path="/about" element={<About Hello="Geethapriyan" />}></Route> {/* props Example */}
-          <Route path="/profile" element={<Profile name="Geethapriyan S" age={20} profession="Developer" />}></Route>
+          <Route path="/about" element={<About Hello="Ajay" />}></Route> {/* props Example */}
+          <Route path="/profile" element={<Profile name="Ajay" age={19} profession="Developer" />}></Route>
           <Route path="/contact" element={<Contact />}></Route>   {/* state Example */}
         </Routes>
       </BrowserRouter>
