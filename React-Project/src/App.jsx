@@ -13,6 +13,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SignUp from "./components/functionalComponets/SignUp";
 import UseState from "./components/functionalComponets/Hooks/UseState";
 import UseEffect from "./components/functionalComponets/Hooks/UseEffect";
+import UseEffectApi from "./components/functionalComponets/Hooks/UseEffectAPI";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />}></Route>   {/* state Example */}
           <Route path="/use-state" element={<UseState />}></Route>
           <Route path='/use-effect' element={<UseEffect />}></Route>
+          <Route path="/use-Api" element={<UseEffectApi />}></Route>
         </Routes>
       </BrowserRouter >
       <Footer />

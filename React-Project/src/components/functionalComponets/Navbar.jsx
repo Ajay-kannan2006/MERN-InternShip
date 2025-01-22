@@ -18,6 +18,7 @@ const Navbar = () => {
                         {dropdown && <ul onMouseLeave={() => { setDrop(false) }} >
                             <li><Link to="/use-state" className='link'>Use State</Link></li>
                             <li><Link to="/use-effect" className='link'>Use Effect</Link></li>
+                            <li><Link to="/use-api" className='link'>Use API</Link></li>
                         </ul>}
                     </div>
                 </ol>
