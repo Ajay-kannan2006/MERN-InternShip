@@ -11,11 +11,15 @@ import Contact from "./components/functionalComponets/contact";
 import Navbar from "./components/functionalComponets/Navbar";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SignUp from "./components/functionalComponets/SignUp";
+import UseState from "./components/functionalComponets/Hooks/UseState";
+import UseEffect from "./components/functionalComponets/Hooks/UseEffect";
 
 const App = () => {
   return (
     <>
+      <Header />
       <BrowserRouter>
+        <Navbar />
         <Routes>
           <Route path="/" element={<SignUp />}></Route>
           <Route path="/home" element={<Home />}></Route>
@@ -23,8 +27,10 @@ const App = () => {
           <Route path="/about" element={<About Hello="Ajay" />}></Route> {/* props Example */}
           <Route path="/profile" element={<Profile name="Ajay" age={19} profession="Developer" />}></Route>
           <Route path="/contact" element={<Contact />}></Route>   {/* state Example */}
+          <Route path="/use-state" element={<UseState />}></Route>
+          <Route path='/use-effect' element={<UseEffect />}></Route>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter >
       <Footer />
       {/* <Button label="Click Me" onClick={() => alert("Button clicked!")} /> */}
     </>

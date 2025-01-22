@@ -1,8 +1,8 @@
 import Navbar from "./Navbar";
 const About = (Props) => {
-    return(
+    return (
         <div>
-            <Navbar />
+            {/* <Navbar /> */}
             <h3>Hello {Props.Hello} !!</h3>
         </div>
     )
