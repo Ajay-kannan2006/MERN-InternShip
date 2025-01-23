@@ -14,6 +14,9 @@ import SignUp from "./components/functionalComponets/SignUp";
 import UseState from "./components/functionalComponets/Hooks/UseState";
 import UseEffect from "./components/functionalComponets/Hooks/UseEffect";
 import UseEffectApi from "./components/functionalComponets/Hooks/UseEffectAPI";
+import TaskAPI from "./components/functionalComponets/Hooks/TaskAPI";
+import UseRef from "./components/functionalComponets/Hooks/UseRef";
+import UseMemo from "./components/functionalComponets/Hooks/useMemo";
 
 const App = () => {
   return (
@@ -30,7 +33,10 @@ const App = () => {
           <Route path="/contact" element={<Contact />}></Route>   {/* state Example */}
           <Route path="/use-state" element={<UseState />}></Route>
           <Route path='/use-effect' element={<UseEffect />}></Route>
-          <Route path="/use-Api" element={<UseEffectApi />}></Route>
+          <Route path="/use-api" element={<UseEffectApi />}></Route>
+          <Route path="/image-api" element={<TaskAPI />}></Route>
+          <Route path="/use-ref" element={<UseRef />}></Route>
+          <Route path="/use-memo" element={<UseMemo />}></Route>
         </Routes>
       </BrowserRouter >
       <Footer />

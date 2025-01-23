@@ -5,7 +5,7 @@ var UseState = () => {
     var [num, setNum] = useState(0);
     return (
         <>
-            <Navbar />
+            {/* <Navbar /> */}
             <h1>This is the example of use state Example</h1>
             <h3>The number is {num}</h3>
             <button onClick={() => { setNum(num - 1) }}>-</button>
