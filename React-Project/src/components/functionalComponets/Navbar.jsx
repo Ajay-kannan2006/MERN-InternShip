@@ -22,6 +22,7 @@ const Navbar = () => {
                             <li><Link to="/image-api" className='link'>Image Api</Link></li>
                             <li><Link to="/use-ref" className='link'>Use Ref</Link></li>
                             <li><Link to="/use-memo" className='link'>Use Memo</Link></li>
+                            <li><Link to="/use-callback" className='link'>Use Callback</Link></li>
                         </ul>}
                     </div>
                 </ol>

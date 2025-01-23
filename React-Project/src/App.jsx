@@ -17,6 +17,7 @@ import UseEffectApi from "./components/functionalComponets/Hooks/UseEffectAPI";
 import TaskAPI from "./components/functionalComponets/Hooks/TaskAPI";
 import UseRef from "./components/functionalComponets/Hooks/UseRef";
 import UseMemo from "./components/functionalComponets/Hooks/useMemo";
+import UseCallback from "./components/functionalComponets/Hooks/UseCallBack";
 
 const App = () => {
   return (
@@ -37,6 +38,7 @@ const App = () => {
           <Route path="/image-api" element={<TaskAPI />}></Route>
           <Route path="/use-ref" element={<UseRef />}></Route>
           <Route path="/use-memo" element={<UseMemo />}></Route>
+          <Route path="/use-callback" element={<UseCallback />}></Route>
         </Routes>
       </BrowserRouter >
       <Footer />
