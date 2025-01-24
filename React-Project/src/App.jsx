@@ -4,7 +4,7 @@ import Footer from "./components/functionalComponets/Footer";
 import Header from "./components/functionalComponets/Header";
 import Profile from "./components/functionalComponets/Profile";
 import About from "./components/functionalComponets/About";
-import Contact from "./components/functionalComponets/contact";
+import Contact from "./components/functionalComponets/Contact";
 import Navbar from "./components/functionalComponets/Navbar";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SignUp from "./components/functionalComponets/SignUp";
