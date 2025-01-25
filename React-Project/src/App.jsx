@@ -15,6 +15,7 @@ import TaskAPI from "./components/functionalComponets/Hooks/TaskAPI";
 import UseRef from "./components/functionalComponets/Hooks/UseRef";
 import UseMemo from "./components/functionalComponets/Hooks/useMemo";
 import UseCallback from "./components/functionalComponets/Hooks/UseCallBack";
+import Student from "./components/functionalComponets/Hooks/UseContext";
 // import ReactLifecycleMethods from "./components/classComponents/ReactLifecycleMethods";
 
 const App = () => {
@@ -37,6 +38,7 @@ const App = () => {
           <Route path="/use-ref" element={<UseRef />}></Route>
           <Route path="/use-memo" element={<UseMemo />}></Route>
           <Route path="/use-callback" element={<UseCallback />}></Route>
+          <Route path="/use-context" element={<Student />}></Route>
           {/* <Route path="reactlm" element={<ReactLifecycleMethods />}></Route> */}
         </Routes>
       </BrowserRouter >

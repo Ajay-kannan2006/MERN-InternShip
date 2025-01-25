@@ -23,6 +23,7 @@ const Navbar = () => {
                             <li><Link to="/use-ref" className='link'>Use Ref</Link></li>
                             <li><Link to="/use-memo" className='link'>Use Memo</Link></li>
                             <li><Link to="/use-callback" className='link'>Use Callback</Link></li>
+                            <li><Link to="/use-context" className='link'>Use Context</Link></li>
                         </ul>}
                     </div>
                 </ol>
