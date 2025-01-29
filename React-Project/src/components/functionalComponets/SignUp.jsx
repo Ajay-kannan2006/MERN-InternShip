@@ -1,33 +1,64 @@
 import React from 'react'
 import "../../css/SignUp.css"
-import { Link } from "react-router-dom"
-
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 const SignUp = () => {
+   var [firstName, setFirstname] = useState("");
+   var [lastName, setLastname] = useState("");
+   var [username, setUsername] = useState("");
+   var [email, setEmail] = useState("");
+   var [password, setPassword] = useState("");
+   var navigate = useNavigate();
+
+   const handleSignup = async (event) => {
+      event.preventDefault();
+      console.log("Event Triggered");
+      try {
+         const req = await axios.post("https://localhost:5173/signup", {
+            firstName: firstName,
+            lastName: lastName,
+            username: username,
+            email: email,
+            password: password,
+         });
+         console.log(req);
+         alert(req.data.response);
+         if (req.data.signupStatus) {
+            navigate("/home");
+         }
+      } catch (err) {
+         console.log(err);
+      }
+   };
    return (
       <div className="body">
          <div className="center">
-            <div class="text">
-               Login Form
+            <div className="text">
+               Signup Form
             </div>
-            <form action="http://localhost:">
+            <form onSubmit={handleSignup}>
                <div className="data">
-                  <label>Email or Phone</label>
-                  <input type="text" required />
+                  <label htmlFor="name">firstName</label>
+                  <input type="text" name="firstName" placeholder="enter your firstname" onChange={(e) => setFirstname(e.target.value)} required />
                </div>
                <div className="data">
-                  <label>Password</label>
-                  <input type="password" required />
+                  <label htmlFor="name">lastName</label>
+                  <input type="text" name="lastName" placeholder="enter your lastnamename" onChange={(e) => setLastname(e.target.value)} required />
                </div>
-               <div className="forgot-pass">
-                  <a href="#">Forgot Password?</a>
+               <div className="data">
+                  <label htmlFor="username">UserName</label>
+                  <input type="text" name="username" placeholder="enter your username" onChange={(e) => setUsername(e.target.value)} required />
                </div>
-               <div className="btn">
-                  <div className="inner"></div>
-                  <Link to="/home"><button className="log-but" type="submit">login</button></Link>
+               <div className="data">
+                  <label htmlFor="email">Email</label>
+                  <input type="email" name="email" placeholder="enter your email" onChange={(e) => setEmail(e.target.value)} required />
                </div>
-               <div className="signup-link">
-                  Not a member? <a href="#">Signup now</a>
+               <div className="data">
+                  <label htmlFor="password">Password</label>
+                  <input type="text" name="password" placeholder="enter your password" onChange={(e) => setPassword(e.target.value)} required />
                </div>
+               <button type='submit'>sumbit</button>
             </form>
          </div>
       </div>
